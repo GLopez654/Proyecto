@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 245" role="img" aria-labelledby="title description">
+  <title id="title">ECO Air Energy Global</title>
+  <desc id="description">ECO Air Energy Global logo.</desc>
+  <path d="M72 26h362c22 0 40 18 40 40v72c0 22-18 40-40 40H72c-22 0-40-18-40-40V66c0-22 18-40 40-40Z" fill="#2e3997"/>
+  <path d="M79 60h94v24h-60v23h54v23h-54v25h60v24H79Z" fill="#fff"/>
+  <path d="M267 77c-11-10-24-15-39-15-32 0-55 23-55 57s23 57 55 57c15 0 28-5 39-15v-30c-10 13-23 19-38 19-19 0-33-13-33-31s14-31 33-31c15 0 28 6 38 19Z" fill="#fff"/>
+  <circle cx="353" cy="119" r="55" fill="#fff"/>
+  <path d="M352 65a54 54 0 0 1 48 30c-20-9-39-8-55 3 2-12 4-23 7-33Z" fill="#0079b8"/>
+  <path d="M400 96a54 54 0 0 1-7 56c-5-21-17-36-35-43 15-5 29-9 42-13Z" fill="#00a69c"/>
+  <path d="M392 153a54 54 0 0 1-52 18c18-12 28-28 31-48 8 12 15 22 21 30Z" fill="#a8c900"/>
+  <path d="M339 171a54 54 0 0 1-38-42c20 9 39 8 55-3-5 18-10 33-17 45Z" fill="#f0c919"/>
+  <path d="M300 127a54 54 0 0 1 6-56c6 21 18 35 37 43-15 6-29 10-43 13Z" fill="#008a7a"/>
+  <circle cx="353" cy="119" r="16" fill="#fff"/>
+  <text x="35" y="226" fill="#000000" font-family="Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="5">AIR ENERGY-GLOBAL</text>
+</svg>
