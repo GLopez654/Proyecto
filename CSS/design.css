@@ -142,7 +142,13 @@ body > header nav li.nav-item-has-menu:hover > a::before, body > header nav li.n
     transition: opacity 180ms ease, transform 240ms ease, visibility 240ms ease;
     visibility: hidden;
 }
-.nav-item-align-end .nav-submenu { right: 0; left: auto; }
+.nav-item-align-end .nav-submenu {
+    right: 0;
+    left: auto;
+    width: min(270px, calc(100vw - 24px));
+    min-width: 0;
+    transform-origin: top right;
+}
 .nav-submenu li { position: static; }
 .nav-submenu span {
     display: block;
