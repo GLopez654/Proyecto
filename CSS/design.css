@@ -143,9 +143,9 @@ body > header nav li.nav-item-has-menu:hover > a::before, body > header nav li.n
     visibility: hidden;
 }
 .nav-item-align-end .nav-submenu {
-    right: 0;
+    right: 12px;
     left: auto;
-    width: min(270px, calc(100vw - 24px));
+    width: min(270px, calc(100vw - 48px));
     min-width: 0;
     transform-origin: top right;
 }
