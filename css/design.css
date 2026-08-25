@@ -560,3 +560,42 @@ input:focus, textarea:focus, select:focus { border-color: var(--blue); box-shado
 @media (max-width: 560px) { .project-objective { width: calc(100% - 36px); margin: 64px auto; } .project-objective-mark { min-height: 200px; padding: 28px 24px; } .project-objective-mark span { font-size: 3.5rem; } .project-objective-mark img { width: 190px; } .project-objective-content { padding: 38px 24px; } .project-objective-content h2 { font-size: 1.9rem; } .project-objective-content p:last-child { font-size: .93rem; } }
 @media (max-width: 860px) { .corporate-profile { grid-template-columns: 1fr; } .corporate-brand-panel { min-height: 290px; padding: 42px 36px; } .corporate-download { width: calc(100% + 72px); margin: auto 0 -42px -36px; padding: 22px 36px; } .corporate-content-panel { padding: 48px 36px 0; } .corporate-team-photo { margin: 56px -36px 0; } }
 @media (max-width: 560px) { .corporate-profile { width: calc(100% - 36px); margin: 64px auto; } .corporate-brand-panel { padding: 32px 24px; } .corporate-download { width: calc(100% + 48px); margin: auto 0 -32px -24px; padding: 20px 24px; } .corporate-content-panel { padding: 38px 24px 0; } .corporate-content-panel h2 { font-size: 1.9rem; } .corporate-services { grid-template-columns: 1fr; } .corporate-team-photo { min-height: 230px; margin: 48px -24px 0; } .corporate-team-photo img { min-height: 230px; } }
+
+:root {
+    --container: 1360px;
+    --page-gutter: 16px;
+}
+
+body { font-size: 17px; }
+
+.site-header, body > header {
+    padding-right: max(var(--page-gutter), calc((100% - var(--container)) / 2));
+    padding-left: max(var(--page-gutter), calc((100% - var(--container)) / 2));
+}
+.header-contact { font-size: .9rem; }
+.header-contact-button { font-size: .84rem; }
+.site-header nav a, body > header nav a { font-size: .9rem; }
+
+#inicio {
+    padding-right: max(var(--page-gutter), calc((100% - var(--container)) / 2));
+    padding-left: max(var(--page-gutter), calc((100% - var(--container)) / 2));
+}
+.page-intro, .section, .content-split, .principles, .team-note, .services-list,
+.certification-grid, .metrics, .industries, .gallery-grid, .contact-layout,
+.clientes-section, .partners-carousel-section, .certification-carousel-section,
+.services-carousel-section, .maintenance-carousel-section, .corporate-summary,
+.corporate-profile, .project-objective {
+    width: min(var(--container), calc(100% - (var(--page-gutter) * 2)));
+}
+.page-intro { margin-left: max(var(--page-gutter), calc((100% - var(--container)) / 2)); }
+.band, .site-footer {
+    padding-right: max(var(--page-gutter), calc((100% - var(--container)) / 2));
+    padding-left: max(var(--page-gutter), calc((100% - var(--container)) / 2));
+}
+.site-footer { font-size: .9rem; }
+
+@media (max-width: 800px) {
+    :root { --page-gutter: 14px; }
+    .site-header, body > header { padding-right: var(--page-gutter); padding-left: var(--page-gutter); }
+    .site-header nav, body > header nav { right: var(--page-gutter); width: min(250px, calc(100vw - (var(--page-gutter) * 2))); }
+}
