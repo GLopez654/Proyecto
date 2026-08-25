@@ -26,15 +26,18 @@
 }
 
 .gallery-header-no-logo .header-contact {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(1180px, calc(100% - 48px));
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
     padding: 0 24px;
     gap: 24px;
 }
 
 .gallery-header-no-logo .header-contact > * {
     min-width: 0;
+    flex: 1 1 0;
 }
 
 .gallery-header-no-logo nav,
