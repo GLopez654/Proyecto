@@ -386,10 +386,8 @@ footer p {
 	}
 }
 
-/* Forzar la ocultación absoluta de cualquier botón de descarga de brochure erróneo */
-.site-footer .brochure-section,
-.site-footer .brochure-download,
-footer .brochure-section,
-footer .brochure-download {
+/* Ocultar únicamente el botón de brochure que aparezca dentro del footer oscuro */
+.site-footer a.brochure-download,
+footer a.brochure-download {
     display: none !important;
 }
