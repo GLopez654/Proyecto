@@ -21,6 +21,8 @@
 .gallery-header-no-logo {
     grid-template-columns: minmax(0, 1fr) auto;
     width: 100%;
+    max-width: 100%;
+    margin-right: 0;
     padding-right: 0;
     padding-left: 0;
 }
