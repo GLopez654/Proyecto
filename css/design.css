@@ -316,6 +316,16 @@ input:focus, textarea:focus, select:focus { border-color: var(--blue); box-shado
     transition: background 180ms ease, transform 180ms ease;
 }
 .brochure-download:hover, .brochure-download:focus-visible { background: rgba(201,220,88,.2); outline: none; transform: translateY(-2px); }
+.partners-carousel-section > .brochure-download {
+    display: flex;
+    width: fit-content;
+    margin: 4px auto 0;
+    color: var(--teal-dark) !important;
+    background: var(--lime);
+    border-color: var(--lime);
+}
+.partners-carousel-section > .brochure-download:hover,
+.partners-carousel-section > .brochure-download:focus-visible { background: #d9ec79; }
 
 .btn-whatsapp {
     position: fixed;

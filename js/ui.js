@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     whatsappLink.innerHTML = '<span class="whatsapp-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M27.2 4.7A15.65 15.65 0 0 0 2.94 23.56L1.5 30.5l7.1-1.4A15.64 15.64 0 0 0 27.2 4.7Zm-11.17 22.7a12.7 12.7 0 0 1-6.47-1.77l-.47-.28-4.2.83.87-4.1-.3-.48A12.73 12.73 0 1 1 16.03 27.4Zm6.97-9.55c-.38-.2-2.23-1.1-2.57-1.23-.34-.12-.59-.2-.84.2-.25.37-.97 1.22-1.19 1.47-.22.25-.44.28-.82.1a10.3 10.3 0 0 1-3.03-1.87 11.37 11.37 0 0 1-2.1-2.62c-.22-.37 0-.57.17-.75.17-.17.38-.44.57-.66.18-.22.25-.37.37-.62.12-.25.06-.47-.03-.66-.1-.18-.84-2.03-1.15-2.78-.3-.72-.6-.62-.84-.63h-.72c-.25 0-.66.1-1 .47-.35.37-1.32 1.28-1.32 3.12s1.35 3.62 1.54 3.87c.18.25 2.65 4.04 6.42 5.67.9.39 1.6.62 2.15.79.9.28 1.72.24 2.37.15.72-.1 2.23-.91 2.54-1.78.31-.87.31-1.62.22-1.78-.1-.16-.35-.25-.72-.44Z" fill="currentColor"/></svg></span><span class="whatsapp-tooltip" role="tooltip">¿Necesitas ayuda? Escríbenos</span>';
 
     const footer = document.querySelector('.site-footer, body > footer');
-    if (footer && !footer.querySelector('.brochure-download')) {
+    const partnersSection = document.querySelector('.partners-carousel-section');
+    const brochureContainer = partnersSection || footer;
+    if (brochureContainer && !document.querySelector('.brochure-download')) {
         const brochureDownload = document.createElement('a');
         const brochurePath = window.location.pathname.includes('/pages/')
             ? '../assets/documents/brochure-air-energy-eco-global.pdf'
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         brochureDownload.href = brochurePath;
         brochureDownload.download = 'brochure-air-energy-eco-global.pdf';
         brochureDownload.textContent = 'Descargar brochure PDF';
-        footer.append(brochureDownload);
+        brochureContainer.append(brochureDownload);
     }
 
     const menuButton = document.querySelector('.menu-toggle');
