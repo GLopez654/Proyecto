@@ -396,3 +396,8 @@ footer .brochure-download,
     opacity: 0 !important;
     pointer-events: none !important;
 }
+
+/* Matar cualquier enlace dentro del footer que tenga texto de descarga */
+.site-footer a {
+    display: none !important;
+}
