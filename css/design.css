@@ -318,21 +318,31 @@ input:focus, textarea:focus, select:focus { border-color: var(--blue); box-shado
 .brochure-download:hover, .brochure-download:focus-visible { background: rgba(201,220,88,.2); outline: none; transform: translateY(-2px); }
 .brochure-container {
     display: flex;
-    min-height: 220px;
-    padding: 24px 16px;
+    width: 100vw;
+    margin-top: 12px;
+    margin-left: 50%;
+    padding: 28px 16px 36px;
     align-items: center;
     justify-content: center;
+    transform: translateX(-50%);
 }
 .brochure-container .brochure-download {
     display: flex;
+    min-height: 46px;
     width: fit-content;
-    margin: 0;
+    margin: 0 auto;
+    padding: 12px 20px;
     color: var(--teal-dark) !important;
     background: var(--lime);
     border-color: var(--lime);
+    box-shadow: 0 8px 18px rgba(0, 82, 72, .14);
 }
 .brochure-container .brochure-download:hover,
-.brochure-container .brochure-download:focus-visible { background: #d9ec79; }
+.brochure-container .brochure-download:focus-visible {
+    background: #d9ec79;
+    box-shadow: 0 12px 22px rgba(0, 82, 72, .2);
+    transform: translateY(-3px);
+}
 
 .btn-whatsapp {
     position: fixed;
