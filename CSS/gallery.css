@@ -1,3 +1,8 @@
+#galeria {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .gallery-intro {
     position: relative;
     max-width: none;
