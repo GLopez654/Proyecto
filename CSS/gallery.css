@@ -20,6 +20,18 @@
 
 .gallery-header-no-logo {
     grid-template-columns: minmax(0, 1fr) auto;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.gallery-header-no-logo nav,
+.gallery-header-no-logo nav ul {
+    width: 100%;
+}
+
+.gallery-header-no-logo nav ul {
+    justify-content: center;
 }
 
 .gallery-intro::after {
