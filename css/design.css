@@ -683,3 +683,45 @@ body .brochure-container-center .btn-brochure:focus-visible {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 }
+
+.site-footer {
+    display: flex;
+    min-height: 88px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-location {
+    display: grid;
+    gap: 5px;
+}
+
+.footer-location-label {
+    color: var(--lime);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.footer-location a {
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 600;
+    line-height: 1.45;
+    text-decoration: none;
+}
+
+.footer-location strong {
+    display: block;
+    color: #d5e7df;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.footer-location a:hover,
+.footer-location a:focus-visible {
+    color: var(--lime);
+    outline: none;
+}
