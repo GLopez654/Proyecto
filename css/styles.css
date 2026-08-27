@@ -349,6 +349,8 @@ body .partners-card-carousel {
     margin-top: 32px;
     padding: 8px 0 24px;
     overflow: visible;
+    perspective: none;
+    scroll-snap-type: none;
 }
 
 body .partner-card {
@@ -380,6 +382,17 @@ body .partner-card img {
 body .partner-card p {
     margin: 20px 0 0;
     font-size: 0.9rem;
+}
+
+@media (min-width: 1080px) {
+    body .partners-card-carousel {
+        flex-wrap: nowrap;
+    }
+
+    body .partner-card {
+        flex-basis: 0;
+        min-width: 0;
+    }
 }
 
 @media (max-width: 900px) {
