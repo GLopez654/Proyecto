@@ -409,3 +409,28 @@ footer p {
         min-height: 0;
     }
 }
+
+/* Contenedor de empresas / alianzas */
+.empresas-grid, 
+section:has(.logo) img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para las tarjetas de cada aliado */
+.aliado-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(16, 42, 49, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.aliado-card:hover {
+    transform: translateY(-4px);
+}
