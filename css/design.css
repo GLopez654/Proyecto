@@ -750,3 +750,50 @@ body .brochure-container-center .btn-brochure:focus-visible {
         border-left: 0;
     }
 }
+
+body .footer-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+body .footer-location-label,
+body .footer-address,
+body .footer-city {
+    display: block;
+    margin: 0;
+}
+
+body .footer-address,
+body .footer-city {
+    padding-left: 28px;
+    border-left: 1px solid rgba(213, 231, 223, .45);
+}
+
+body .footer-address {
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body .footer-city {
+    color: #d5e7df;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+@media (max-width: 640px) {
+    body .footer-location {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    body .footer-address,
+    body .footer-city {
+        padding: 10px 0 0;
+        border-top: 1px solid rgba(213, 231, 223, .45);
+        border-left: 0;
+    }
+}
