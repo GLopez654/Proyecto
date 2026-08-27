@@ -159,6 +159,10 @@ body > header nav li.nav-item-has-menu:hover > a::before, body > header nav li.n
     line-height: 1.35;
     white-space: nowrap;
 }
+.site-header nav > ul > li:first-child .nav-submenu span,
+body > header nav > ul > li:first-child .nav-submenu span {
+    text-align: center;
+}
 .nav-submenu a {
     display: block !important;
     min-height: 0 !important;
