@@ -410,50 +410,39 @@ footer p {
     }
 }
 
-/* Contenedor del carrusel / tarjetas de empresas */
-.partners-card-carousel,
-.auto-card-carousel {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-    align-items: stretch;
-    margin-top: 32px;
-}
 
-/* Tarjeta individual de cada aliado */
-.partner-card {
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 24px;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(16, 42, 49, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.partner-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(16, 42, 49, 0.1);
-}
-
-/* Imagen del logo dentro de la tarjeta */
-.partner-card img {
-    max-width: 100%;
-    height: 60px;
-    object-fit: contain;
-    margin-bottom: 14px;
-}
-
-/* Texto del nombre de la empresa */
-.partner-card p {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-ink);
-    margin: 0;
-}
+        /* Estilos directos de emergencia para las tarjetas de empresas */
+        .partners-card-carousel, .auto-card-carousel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            align-items: stretch;
+            margin-top: 32px;
+        }
+        .partner-card {
+            background: #ffffff;
+            border: 1px solid #d6e3df;
+            border-radius: 8px;
+            padding: 24px;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(16, 42, 49, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .partner-card img {
+            max-width: 100%;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 14px;
+        }
+        .partner-card p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #102a31;
+            margin: 0;
+        }
+   
