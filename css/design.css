@@ -725,3 +725,28 @@ body .brochure-container-center .btn-brochure:focus-visible {
     color: var(--lime);
     outline: none;
 }
+
+.footer-location a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footer-location strong {
+    padding-left: 18px;
+    border-left: 1px solid rgba(213, 231, 223, .45);
+}
+
+@media (max-width: 480px) {
+    .footer-location a {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .footer-location strong {
+        padding: 6px 0 0;
+        border-top: 1px solid rgba(213, 231, 223, .45);
+        border-left: 0;
+    }
+}
