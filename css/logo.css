@@ -5,9 +5,10 @@ header.site-header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    gap: 15px;
-    padding: 10px 24px;
+    gap: 10px;
+    padding: 10px 18px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* Estilos avanzados del logotipo basados en la referencia */
@@ -17,8 +18,8 @@ header.site-header {
     display: flex !important;
     align-items: center !important;
     flex: 0 0 auto !important;
-    width: 240px !important;
-    height: 70px !important;
+    width: 210px !important;
+    height: 65px !important;
     overflow: visible !important;
     text-decoration: none !important;
 }
@@ -71,12 +72,31 @@ header .header-contact {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-grow: 1;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+/* Botón de contacto para que no se deforme */
+.site-header .header-contact-button {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Navegación acoplada para que no baje */
+.site-header nav {
+    flex-shrink: 0;
 }
 
 /* Ajuste responsive para pantallas pequeñas */
+@media (max-width: 1100px) {
+    header .header-contact {
+        display: none; /* Oculta los textos largos en pantallas medianas para proteger el diseño horizontal si es necesario */
+    }
+}
+
 @media (max-width: 800px) {
     .site-header .brand,
     .site-header .brand-logo-frame {
