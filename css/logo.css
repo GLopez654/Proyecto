@@ -1,25 +1,25 @@
-/* --- Corrección limpia del Header y el Logo --- */
+/* --- Corrección definitiva: Todo en una sola línea de manera compacta --- */
 
 header.site-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 10px;
-    padding: 10px 18px;
+    flex-wrap: nowrap !important;
+    gap: 8px;
+    padding: 6px 15px;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Estilos avanzados del logotipo basados en la referencia */
+/* Logotipo con el tamaño exacto que pediste */
 .site-header .brand {
     position: relative !important;
     z-index: 2 !important;
     display: flex !important;
     align-items: center !important;
     flex: 0 0 auto !important;
-    width: 210px !important;
-    height: 65px !important;
+    width: 200px !important;
+    height: 55px !important;
     overflow: visible !important;
     text-decoration: none !important;
 }
@@ -45,7 +45,7 @@ header.site-header {
     display: block !important;
 }
 
-/* Efecto brillo opcional para el logo */
+/* Efecto brillo del logo */
 .site-header .brand-logo-frame::after {
     position: absolute;
     z-index: 2;
@@ -67,40 +67,58 @@ header.site-header {
     78% { opacity: 0; transform: skewX(-18deg) translateX(680%); }
 }
 
-/* Espaciado de los datos de contacto centrales */
+/* Datos de contacto optimizados para ahorrar espacio horizontal */
 header .header-contact {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-around;
+    gap: 10px;
     flex-grow: 1;
-    font-size: 0.8rem;
-    flex-shrink: 1;
-    min-width: 0;
+    font-size: 0.75rem;
+    margin: 0 5px;
+    overflow: hidden;
 }
 
-/* Botón de contacto para que no se deforme */
-.site-header .header-contact-button {
-    flex-shrink: 0;
+header .header-contact a, 
+header .header-contact span {
+    font-size: 0.75rem;
     white-space: nowrap;
 }
 
-/* Navegación acoplada para que no baje */
+/* Botón de contacto compacto */
+.site-header .header-contact-button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+}
+
+/* Menú de navegación acoplado a la derecha en la misma línea */
 .site-header nav {
-    flex-shrink: 0;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
 }
 
-/* Ajuste responsive para pantallas pequeñas */
-@media (max-width: 1100px) {
-    header .header-contact {
-        display: none; /* Oculta los textos largos en pantallas medianas para proteger el diseño horizontal si es necesario */
-    }
+.site-header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.site-header nav ul li a {
+    font-size: 0.75rem;
+    padding: 4px 6px;
+    white-space: nowrap;
+}
+
+/* Ajuste responsive por seguridad */
 @media (max-width: 800px) {
-    .site-header .brand,
-    .site-header .brand-logo-frame {
-        width: 160px !important;
-        height: 60px !important;
+    .site-header .brand {
+        width: 140px !important;
+        height: 50px !important;
     }
 }
