@@ -1,25 +1,26 @@
-/* --- Corrección definitiva: Todo en una sola línea de manera compacta --- */
+/* --- Corrección definitiva de una sola línea para el Header --- */
 
 header.site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     flex-wrap: nowrap !important;
-    gap: 8px;
-    padding: 6px 15px;
-    width: 100%;
-    box-sizing: border-box;
+    gap: 8px !important;
+    padding: 8px 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
 }
 
-/* Logotipo con el tamaño exacto que pediste */
+/* Logotipo */
 .site-header .brand {
     position: relative !important;
     z-index: 2 !important;
     display: flex !important;
     align-items: center !important;
     flex: 0 0 auto !important;
-    width: 200px !important;
-    height: 55px !important;
+    width: 190px !important;
+    height: 50px !important;
     overflow: visible !important;
     text-decoration: none !important;
 }
@@ -30,7 +31,6 @@ header.site-header {
     width: 100% !important;
     height: 100% !important;
     overflow: visible !important;
-    border-radius: 4px;
 }
 
 .site-header .brand-logo {
@@ -45,80 +45,55 @@ header.site-header {
     display: block !important;
 }
 
-/* Efecto brillo del logo */
-.site-header .brand-logo-frame::after {
-    position: absolute;
-    z-index: 2;
-    top: -20%;
-    bottom: -20%;
-    left: -45%;
-    width: 24%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.68), transparent);
-    content: '';
-    opacity: 0;
-    pointer-events: none;
-    transform: skewX(-18deg) translateX(-520%);
-    animation: logo-shine 5.8s ease-in-out infinite;
-}
-
-@keyframes logo-shine {
-    0%, 58%, 100% { opacity: 0; transform: skewX(-18deg) translateX(-520%); }
-    66% { opacity: .9; }
-    78% { opacity: 0; transform: skewX(-18deg) translateX(680%); }
-}
-
-/* Datos de contacto optimizados para ahorrar espacio horizontal */
+/* Datos de contacto centrales */
 header .header-contact {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 10px;
-    flex-grow: 1;
-    font-size: 0.75rem;
-    margin: 0 5px;
-    overflow: hidden;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-around !important;
+    gap: 10px !important;
+    flex-grow: 1 !important;
+    font-size: 0.75rem !important;
+    margin: 0 10px !important;
 }
 
 header .header-contact a, 
 header .header-contact span {
-    font-size: 0.75rem;
-    white-space: nowrap;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
 }
 
-/* Botón de contacto compacto */
+/* Botón de contáctanos */
 .site-header .header-contact-button {
-    flex: 0 0 auto;
-    white-space: nowrap;
-    padding: 6px 12px;
-    font-size: 0.75rem;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
 }
 
-/* Menú de navegación acoplado a la derecha en la misma línea */
+/* Menú de navegación forzado a la misma línea */
 .site-header nav {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
 .site-header nav ul {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 2px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.site-header nav ul li {
+    display: inline-flex !important;
+    position: relative !important;
 }
 
 .site-header nav ul li a {
-    font-size: 0.75rem;
-    padding: 4px 6px;
-    white-space: nowrap;
-}
-
-/* Ajuste responsive por seguridad */
-@media (max-width: 800px) {
-    .site-header .brand {
-        width: 140px !important;
-        height: 50px !important;
-    }
+    font-size: 0.75rem !important;
+    padding: 4px 6px !important;
+    white-space: nowrap !important;
 }
