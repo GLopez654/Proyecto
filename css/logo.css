@@ -1,10 +1,26 @@
+/* --- Corrección limpia del Header y el Logo --- */
+
+header.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 10px 24px;
+    width: 100%;
+}
+
+/* Estilos avanzados del logotipo basados en la referencia */
 .site-header .brand {
     position: relative !important;
     z-index: 2 !important;
-    display: block !important;
-    width: 240px !important; /* Ancho seguro para que respire completo */
+    display: flex !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+    width: 240px !important;
     height: 70px !important;
     overflow: visible !important;
+    text-decoration: none !important;
 }
 
 .site-header .brand-logo-frame {
@@ -25,8 +41,10 @@
     max-height: 100% !important;
     object-fit: contain !important;
     transform: translateY(-50%) !important;
+    display: block !important;
 }
 
+/* Efecto brillo opcional para el logo */
 .site-header .brand-logo-frame::after {
     position: absolute;
     z-index: 2;
@@ -48,9 +66,21 @@
     78% { opacity: 0; transform: skewX(-18deg) translateX(680%); }
 }
 
+/* Espaciado de los datos de contacto centrales */
+header .header-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-grow: 1;
+    font-size: 0.85rem;
+}
+
+/* Ajuste responsive para pantallas pequeñas */
 @media (max-width: 800px) {
     .site-header .brand,
     .site-header .brand-logo-frame {
-        width: 160px;
+        width: 160px !important;
+        height: 60px !important;
     }
 }
