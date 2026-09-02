@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/logo.css">
     <link rel="stylesheet" href="css/design.css">
     <style>
-        /* Estructura del Grid del Header corregida y robusta */
+        /* Estructura del Grid del Header limpia y correcta */
         header.site-header {
             display: grid !important;
             grid-template-columns: auto 1fr auto !important;
@@ -22,7 +22,7 @@
             box-sizing: border-box !important;
         }
         
-        /* Fila 1: Logotipo con tamaño natural y proporción correcta */
+        /* Logotipo con tamaño natural y proporción correcta */
         header.site-header > .brand {
             grid-row: 1 !important;
             grid-column: 1 !important;
@@ -40,7 +40,7 @@
             object-fit: contain !important;
         }
 
-        /* Fila 1: Contactos en el centro distribuidos equitativamente */
+        /* Datos de contacto en el centro */
         header.site-header > .header-contact {
             grid-row: 1 !important;
             grid-column: 2 !important;
@@ -58,7 +58,7 @@
             vertical-align: middle !important;
         }
 
-        /* Fila 1: Botón Contáctanos alineado a la derecha */
+        /* Botón Contáctanos alineado a la derecha */
         header.site-header > .header-contact-button {
             grid-row: 1 !important;
             grid-column: 3 !important;
@@ -68,7 +68,7 @@
             padding: 10px 20px !important;
         }
 
-        /* Fila 2: Menú de navegación azul abarcando todo el ancho de forma estricta */
+        /* Menú de navegación azul abarcando todo el ancho */
         header.site-header > nav#primary-nav {
             grid-row: 2 !important;
             grid-column: 1 / -1 !important;
@@ -82,22 +82,6 @@
             margin: 0 !important;
             padding: 0 !important;
             width: 100% !important;
-        }
-
-        /* Sección Hero con texto e imagen a la derecha */
-        .hero-split-section {
-            display: grid !important;
-            grid-template-columns: 1fr 1fr !important;
-            align-items: center !important;
-            gap: 40px !important;
-            padding: 60px 40px !important;
-            box-sizing: border-box !important;
-        }
-        .hero-split-image img {
-            width: 100% !important;
-            height: auto !important;
-            border-radius: 8px !important;
-            object-fit: cover !important;
         }
     </style>
 </head>
@@ -126,7 +110,7 @@
             <span></span><span></span><span></span>
         </button>
         
-        <!-- Menú de navegación principal (Fila 2 - Ancho completo corregido) -->
+        <!-- Menú de navegación principal (Fila 2) -->
         <nav id="primary-nav">
             <ul>
                 <li class="nav-item-has-menu"><a class="active" aria-current="page" href="index.html">Inicio</a><ul class="nav-submenu" aria-label="Detalles de Inicio"><li><span>Home</span></li></ul></li>
@@ -141,18 +125,20 @@
     </header>
 
     <main>
-        <!-- Sección Hero con texto e imagen agregada a la derecha -->
-        <section class="hero-split-section" aria-label="Respuestas claras para operaciones reales">
-            <div class="hero-split-content">
-                <h1 style="font-size: 2.5rem; line-height: 1.1; color: #0b1c3c; margin-bottom: 20px; font-weight: 800;">
-                    Respuestas claras para operaciones reales.
-                </h1>
-                <p style="font-size: 1rem; color: #333; line-height: 1.5;">
-                    Hemos acompañado proyectos donde el clima, la distancia, el tiempo y la seguridad hacen que cada detalle cuente.
-                </p>
+        <!-- SECCIÓN DE INICIO CON EL VIDEO DE FONDO RESTAURADO -->
+        <section id="inicio" class="hero-carousel" aria-label="Proyectos técnicos de AIR ENERGY ECO-GLOBAL">
+            <div class="hero-slide hero-slide-industrial is-active" aria-hidden="true">
+                <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/panel.avif">
+                    <source src="assets/images/video1.mp4" type="video/mp4">
+                </video>
             </div>
-            <div class="hero-split-image">
-                <img src="assets/images/panel.avif" alt="Operaciones y proyectos industriales Air Energy">
+            <div class="hero-content">
+                <p class="eyebrow">AIR ENERGY ECO-GLOBAL ZOMAC S.A.S.</p>
+                <h1 class="hero-title">Soluciones Integrales que Transforman, Alianzas que Impulsan.</h1>
+                <div class="hero-actions">
+                    <a class="hero-cta hero-cta-primary" href="pages/servicios.html">Conocer Servicios</a>
+                    <a class="hero-cta hero-cta-secondary" href="pages/contacto.html">Contáctanos / Solicitar Cotización</a>
+                </div>
             </div>
         </section>
 
