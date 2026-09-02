@@ -10,70 +10,73 @@
     <link rel="stylesheet" href="css/logo.css">
     <link rel="stylesheet" href="css/design.css">
     <style>
-        /* Estructura del Grid del Header limpia y correcta */
+        /* Estructura general del Header limpia y estable */
         header.site-header {
-            display: grid !important;
-            grid-template-columns: auto 1fr auto !important;
-            grid-template-rows: auto auto !important;
-            align-items: center !important;
-            gap: 15px 24px !important;
-            padding: 14px 24px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
             max-width: 100% !important;
             box-sizing: border-box !important;
+            background: #ffffff !important;
+        }
+
+        /* Fila Superior: Logo, Contactos y Botón perfectamente alineados */
+        .header-top-row {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 14px 24px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            gap: 20px !important;
         }
         
         /* Logotipo con tamaño natural y proporción correcta */
-        header.site-header > .brand {
-            grid-row: 1 !important;
-            grid-column: 1 !important;
+        .header-top-row .brand {
+            display: flex !important;
+            align-items: center !important;
+            flex-shrink: 0 !important;
+        }
+        .header-top-row .brand .brand-logo-frame {
             display: flex !important;
             align-items: center !important;
         }
-        header.site-header > .brand .brand-logo-frame {
-            display: flex !important;
-            align-items: center !important;
-        }
-        header.site-header > .brand .brand-logo {
+        .header-top-row .brand .brand-logo {
             height: 48px !important;
             width: auto !important;
             max-width: none !important;
             object-fit: contain !important;
         }
 
-        /* Datos de contacto en el centro */
-        header.site-header > .header-contact {
-            grid-row: 1 !important;
-            grid-column: 2 !important;
+        /* Datos de contacto distribuidos en el centro */
+        .header-top-row .header-contact {
             display: flex !important;
             justify-content: space-around !important;
             align-items: center !important;
+            flex-grow: 1 !important;
             font-size: 0.95rem !important;
-            gap: 12px !important;
+            gap: 15px !important;
         }
-        header.site-header > .header-contact a,
-        header.site-header > .header-contact span {
+        .header-top-row .header-contact a,
+        .header-top-row .header-contact span {
             font-size: 0.95rem !important;
             line-height: 1.3 !important;
             display: inline-block !important;
             vertical-align: middle !important;
         }
 
-        /* Botón Contáctanos alineado a la derecha */
-        header.site-header > .header-contact-button {
-            grid-row: 1 !important;
-            grid-column: 3 !important;
-            justify-self: end !important;
-            align-self: center !important;
+        /* Botón Contáctanos a la derecha */
+        .header-top-row .header-contact-button {
+            flex-shrink: 0 !important;
             white-space: nowrap !important;
             padding: 10px 20px !important;
         }
 
-        /* Menú de navegación azul abarcando todo el ancho */
+        /* Fila Inferior: Menú de navegación azul abarcando 100% de ancho de lado a lado */
         header.site-header > nav#primary-nav {
-            grid-row: 2 !important;
-            grid-column: 1 / -1 !important;
             width: 100% !important;
             box-sizing: border-box !important;
+            margin: 0 !important;
         }
         header.site-header > nav#primary-nav ul {
             display: flex !important;
@@ -82,35 +85,39 @@
             margin: 0 !important;
             padding: 0 !important;
             width: 100% !important;
+            box-sizing: border-box !important;
         }
     </style>
 </head>
 <body>
 
     <header class="site-header">
-        <!-- Logotipo -->
-        <a class="brand" href="index.html" aria-label="ECO Air Energy Global, ir al inicio">
-            <span class="brand-logo-frame">
-                <img class="brand-logo brand-logo-dark" src="assets/images/eco-air-energy-logo-transparent.svg" alt="ECO Air Energy Global">
-            </span>
-        </a>
+        <!-- Fila Superior -->
+        <div class="header-top-row">
+            <!-- Logotipo -->
+            <a class="brand" href="index.html" aria-label="ECO Air Energy Global, ir al inicio">
+                <span class="brand-logo-frame">
+                    <img class="brand-logo brand-logo-dark" src="assets/images/eco-air-energy-logo-transparent.svg" alt="ECO Air Energy Global">
+                </span>
+            </a>
 
-        <!-- Datos de contacto -->
-        <div class="header-contact" aria-label="Datos de contacto">
-            <a class="header-address" href="https://www.google.com/maps/search/?api=1&amp;query=Cra+53+N+50-13%2C+Yond%C3%B3%2C+Antioquia%2C+Colombia" target="_blank" rel="noopener noreferrer">Cra 53 N 50-13<br>Yondó, Antioquia</a>
-            <span class="header-email">airenergyecoglobalgmail.com</span>
-            <a class="header-facebook" href="https://www.facebook.com/search/top/?q=AIR%20ENERGY%20ECO-GLOBAL%20ZOMAC" target="_blank" rel="noopener noreferrer">Air Energy Eco-Global Zomac</a>
+            <!-- Datos de contacto -->
+            <div class="header-contact" aria-label="Datos de contacto">
+                <a class="header-address" href="https://www.google.com/maps/search/?api=1&amp;query=Cra+53+N+50-13%2C+Yond%C3%B3%2C+Antioquia%2C+Colombia" target="_blank" rel="noopener noreferrer">Cra 53 N 50-13<br>Yondó, Antioquia</a>
+                <span class="header-email">airenergyecoglobalgmail.com</span>
+                <a class="header-facebook" href="https://www.facebook.com/search/top/?q=AIR%20ENERGY%20ECO-GLOBAL%20ZOMAC" target="_blank" rel="noopener noreferrer">Air Energy Eco-Global Zomac</a>
+            </div>
+
+            <!-- Botón Contáctanos -->
+            <a class="header-contact-button" href="pages/contacto.html">Contáctanos</a>
+
+            <!-- Botón menú móvil (oculto en desktop) -->
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación" style="display: none;">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-
-        <!-- Botón Contáctanos -->
-        <a class="header-contact-button" href="pages/contacto.html">Contáctanos</a>
-
-        <!-- Botón menú móvil (oculto en desktop) -->
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación" style="display: none;">
-            <span></span><span></span><span></span>
-        </button>
         
-        <!-- Menú de navegación principal (Fila 2) -->
+        <!-- Fila Inferior: Menú de navegación principal (Ancho completo garantizado) -->
         <nav id="primary-nav">
             <ul>
                 <li class="nav-item-has-menu"><a class="active" aria-current="page" href="index.html">Inicio</a><ul class="nav-submenu" aria-label="Detalles de Inicio"><li><span>Home</span></li></ul></li>
@@ -125,7 +132,7 @@
     </header>
 
     <main>
-        <!-- SECCIÓN DE INICIO CON EL VIDEO DE FONDO RESTAURADO -->
+        <!-- Sección de Inicio con el video de fondo -->
         <section id="inicio" class="hero-carousel" aria-label="Proyectos técnicos de AIR ENERGY ECO-GLOBAL">
             <div class="hero-slide hero-slide-industrial is-active" aria-hidden="true">
                 <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/panel.avif">
