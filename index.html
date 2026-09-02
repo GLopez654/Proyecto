@@ -26,18 +26,25 @@
             grid-row: 1 !important;
             grid-column: 1 !important;
         }
-        /* Fila 1: Contactos en el centro con letra más grande */
+        /* Fila 1: Contactos en el centro con alineación vertical perfecta */
         header.site-header > .header-contact {
             grid-row: 1 !important;
             grid-column: 2 !important;
             display: flex !important;
             justify-content: space-around !important;
             align-items: center !important;
-            font-size: 0.95rem !important; /* Letra más grande para los datos de contacto */
+            font-size: 0.95rem !important;
+        }
+        /* Corregir la alineación de los elementos individuales dentro de contacto (para que los iconos no se suban) */
+        header.site-header > .header-contact > * {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
         }
         header.site-header > .header-contact a,
         header.site-header > .header-contact span {
-            font-size: 0.95rem !important; /* Forzar tamaño grande en elementos internos */
+            font-size: 0.95rem !important;
+            line-height: 1.3 !important;
         }
         /* Fila 1: Botón Contáctanos a la derecha */
         header.site-header > .header-contact-button {
