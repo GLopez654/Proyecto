@@ -549,3 +549,87 @@ input:focus, textarea:focus, select:focus { border-color: var(--blue); box-shado
     40% { transform: skewX(-18deg) translateX(850%); opacity: 0; }
     100% { transform: skewX(-18deg) translateX(850%); opacity: 0; }
 }
+
+/* ==========================================================================
+   SOLUCIÓN DE ALINEACIÓN DE HEADER Y MENÚ (ANCHO 100%)
+   ========================================================================== */
+
+/* 1. Sobreescribir el display flex de la etiqueta header general */
+header.site-header {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+}
+
+/* 2. Ajuste de la fila superior (Logo y Contacto) */
+.header-top-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 14px max(24px, calc((100% - var(--container)) / 2)) !important;
+    box-sizing: border-box !important;
+    gap: 20px !important;
+}
+
+.header-top-row .brand {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
+.header-top-row .brand .brand-logo {
+    height: 48px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+.header-top-row .header-contact {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    flex-grow: 1 !important;
+    gap: 15px !important;
+}
+
+/* 3. Menú de navegación azul extendido al 100% de la pantalla */
+header.site-header > nav#primary-nav {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    background-color: #004b87 !important;
+}
+
+header.site-header > nav#primary-nav > ul {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    box-sizing: border-box !important;
+}
+
+header.site-header > nav#primary-nav > ul > li {
+    flex: 1 1 0% !important; /* Distribuye proporcionalmente todos los elementos */
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+header.site-header > nav#primary-nav > ul > li > a {
+    display: block !important;
+    width: 100% !important;
+    padding: 12px 0 !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+}
