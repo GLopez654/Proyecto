@@ -601,12 +601,21 @@ header.site-header {
 /* 3. Menú de navegación azul extendido al 100% de la pantalla */
 header.site-header > nav#primary-nav {
     display: block !important;
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
     box-sizing: border-box !important;
     background-color: #004b87 !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
 }
 
 header.site-header > nav#primary-nav > ul {
