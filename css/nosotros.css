@@ -7,9 +7,9 @@
 
 .page-intro {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
-    column-gap: clamp(42px, 7vw, 100px);
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
     width: min(var(--container), calc(100% - 48px)) !important;
     max-width: none !important;
     margin-right: auto !important;
@@ -25,12 +25,13 @@
 .page-intro > img {
     grid-column: 2;
     grid-row: 1;
-    width: min(100%, 360px);
+    width: 100%;
     height: auto;
-    min-height: 0;
+    max-height: 480px;
     margin: 0;
-    justify-self: end;
-    border-radius: 6px;
+    padding: 0;
+    justify-self: stretch;
+    border-radius: 12px;
     object-fit: cover;
     object-position: center;
     box-shadow: 0 16px 32px rgba(23, 50, 56, .14);
