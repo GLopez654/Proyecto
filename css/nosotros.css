@@ -16,11 +16,17 @@
     margin-left: auto;
 }
 
+.page-intro-copy {
+    grid-column: 1;
+    grid-row: 1;
+}
+
 .page-intro > img {
     grid-column: 2;
-    grid-row: 1 / span 3;
+    grid-row: 1;
     width: 100%;
-    height: 390px;
+    height: auto;
+    min-height: 390px;
     margin: 0;
     border-radius: 6px;
     object-fit: cover;
@@ -99,7 +105,7 @@
     font-size: 0.92rem;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
     .team-gallery {
         width: calc(100% - 36px);
         padding-bottom: 64px;
@@ -115,7 +121,8 @@
 
     .page-intro > img {
         width: 100%;
-        height: 320px;
+        height: auto;
+        min-height: 0;
         margin-top: 30px;
     }
 
