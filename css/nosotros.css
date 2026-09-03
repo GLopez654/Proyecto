@@ -7,7 +7,7 @@
 
 .page-intro {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
     column-gap: clamp(42px, 7vw, 100px);
     align-items: center;
     width: min(var(--container), calc(100% - 48px));
@@ -24,10 +24,11 @@
 .page-intro > img {
     grid-column: 2;
     grid-row: 1;
-    width: 100%;
+    width: min(100%, 360px);
     height: auto;
-    min-height: 390px;
+    min-height: 0;
     margin: 0;
+    justify-self: end;
     border-radius: 6px;
     object-fit: cover;
     object-position: center;
