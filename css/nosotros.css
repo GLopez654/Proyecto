@@ -10,15 +10,16 @@
     grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
     column-gap: clamp(42px, 7vw, 100px);
     align-items: center;
-    width: min(var(--container), calc(100% - 48px));
-    max-width: none;
-    margin-right: auto;
-    margin-left: auto;
+    width: min(var(--container), calc(100% - 48px)) !important;
+    max-width: none !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
 
 .page-intro-copy {
     grid-column: 1;
     grid-row: 1;
+    min-width: 0;
 }
 
 .page-intro > img {
