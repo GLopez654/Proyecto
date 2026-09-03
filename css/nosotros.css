@@ -114,7 +114,7 @@
     font-size: 0.92rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .team-gallery {
         width: calc(100% - 36px);
         padding-bottom: 64px;

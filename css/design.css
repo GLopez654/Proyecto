@@ -715,7 +715,7 @@ header.site-header > nav#primary-nav .nav-submenu span {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     body main section#quienes-somos.page-intro {
         display: block !important;
         width: 100% !important;
