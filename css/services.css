@@ -1,9 +1,6 @@
 .services-intro {
     position: relative;
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
-    gap: 40px;
-    align-items: center;
+    display: block;
     width: min(var(--container), calc(100% - 48px));
     max-width: none;
     margin: 0 auto;
@@ -12,6 +9,7 @@
 }
 
 .services-intro-copy {
+    width: 100%;
     min-width: 0;
 }
 
@@ -43,16 +41,6 @@
     color: var(--muted);
     font-size: 1.04rem;
     line-height: 1.75;
-}
-
-.services-intro > img {
-    width: 100%;
-    height: 300px;
-    margin: 0;
-    border-radius: 12px;
-    object-fit: cover;
-    object-position: center;
-    box-shadow: 0 16px 32px rgba(23, 50, 56, .14);
 }
 
 .services-intro + .services-list {
@@ -159,15 +147,6 @@
 }
 
 @media (max-width: 680px) {
-    .services-intro {
-        display: block;
-    }
-
-    .services-intro > img {
-        height: 260px;
-        margin-top: 30px;
-    }
-
     .services-intro {
         width: calc(100% - 36px);
         padding: 64px 0 42px;
