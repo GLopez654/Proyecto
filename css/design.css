@@ -612,9 +612,9 @@ header.site-header > nav#primary-nav {
     top: auto !important;
     right: auto !important;
     left: auto !important;
-    width: calc(100% + 80px) !important;
-    max-width: none !important;
-    margin: 0 0 0 -40px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
     padding: 0 !important;
     max-height: none !important;
     overflow: visible !important;
@@ -919,6 +919,16 @@ body > header .header-top-row .brand-logo-frame {
 }
 
 @media (max-width: 800px) {
+    header.site-header > nav#primary-nav,
+    body > header > nav#primary-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+    }
+
     header.site-header .header-top-row,
     body > header .header-top-row {
         display: flex !important;
@@ -930,15 +940,29 @@ body > header .header-top-row .brand-logo-frame {
 
     header.site-header .header-top-row .brand,
     body > header .header-top-row .brand {
-        flex: 0 0 160px !important;
+        flex: 0 0 120px !important;
         min-width: 0 !important;
+    }
+
+    header.site-header .header-top-row .brand-logo,
+    body > header .header-top-row .brand-logo {
+        width: 120px !important;
+        height: 58px !important;
+        max-width: 120px !important;
+        max-height: 58px !important;
+    }
+
+    header.site-header .header-top-row .brand-logo-frame,
+    body > header .header-top-row .brand-logo-frame {
+        width: 120px !important;
+        height: 58px !important;
     }
 
     header.site-header .header-top-row .header-contact,
     body > header .header-top-row .header-contact {
         display: grid !important;
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-        flex: 1 1 calc(100% - 172px) !important;
+        flex: 1 1 calc(100% - 132px) !important;
         width: auto !important;
         min-width: 0 !important;
         gap: 8px !important;
@@ -970,4 +994,24 @@ header.site-header .header-top-row .header-contact,
 body > header .header-top-row .header-contact {
     box-sizing: border-box !important;
     min-width: 0 !important;
+}
+
+/* El contenido del header puede encogerse y envolver sin recortarse. */
+header.site-header .header-top-row .header-contact a,
+header.site-header .header-top-row .header-contact span,
+body > header .header-top-row .header-contact a,
+body > header .header-top-row .header-contact span {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+}
+
+header.site-header .header-top-row .header-facebook,
+body > header .header-top-row .header-facebook {
+    overflow: visible !important;
+    text-overflow: clip !important;
 }
