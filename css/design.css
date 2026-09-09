@@ -850,10 +850,12 @@ body > header .header-top-row .brand-logo-frame {
     header.site-header .header-top-row,
     body > header .header-top-row {
         display: grid !important;
-        grid-template-columns: 220px minmax(0, 1fr) 142px !important;
+        grid-template-columns: 180px minmax(0, 1fr) !important;
         align-items: center !important;
         column-gap: 20px !important;
-        width: 100% !important;
+        width: min(1200px, 100%) !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
     }
 
     header.site-header .header-top-row .header-contact,
@@ -891,6 +893,27 @@ body > header .header-top-row .brand-logo-frame {
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
+    }
+}
+
+@media (min-width: 801px) {
+    header.site-header .header-top-row .brand-logo,
+    body > header .header-top-row .brand-logo {
+        width: 160px !important;
+        height: 72px !important;
+        max-width: 160px !important;
+    }
+
+    header.site-header .header-top-row .brand-logo-frame,
+    body > header .header-top-row .brand-logo-frame {
+        width: 160px !important;
+        height: 72px !important;
+    }
+
+    header.site-header .header-top-row .header-contact,
+    body > header .header-top-row .header-contact {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 18px !important;
     }
 }
 
