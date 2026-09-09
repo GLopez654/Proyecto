@@ -1015,3 +1015,15 @@ body > header .header-top-row .header-facebook {
     overflow: visible !important;
     text-overflow: clip !important;
 }
+
+/* El nav ocupa exactamente el ancho del header sin heredar un minimo fijo. */
+header.site-header > nav#primary-nav,
+body > header > nav#primary-nav,
+header.site-header > nav#primary-nav > ul,
+body > header > nav#primary-nav > ul,
+header.site-header > nav#primary-nav > ul > li,
+body > header > nav#primary-nav > ul > li {
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
