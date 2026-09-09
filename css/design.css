@@ -867,7 +867,7 @@ body > header .header-top-row .brand-logo-frame {
         flex: none !important;
         min-width: 0 !important;
         gap: 18px !important;
-        overflow: hidden !important;
+        box-sizing: border-box !important;
     }
 
     header.site-header .header-top-row .header-contact > *,
@@ -891,9 +891,10 @@ body > header .header-top-row .brand-logo-frame {
     body > header .header-top-row .header-facebook {
         min-width: 0 !important;
         max-width: none !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        white-space: normal !important;
+        overflow-wrap: normal !important;
     }
 }
 
@@ -913,7 +914,7 @@ body > header .header-top-row .brand-logo-frame {
 
     header.site-header .header-top-row .header-contact,
     body > header .header-top-row .header-contact {
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(170px, 1.25fr) !important;
         gap: 18px !important;
     }
 }
@@ -961,12 +962,12 @@ body > header .header-top-row .brand-logo-frame {
     header.site-header .header-top-row .header-contact,
     body > header .header-top-row .header-contact {
         display: grid !important;
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-        flex: 1 1 calc(100% - 132px) !important;
-        width: auto !important;
+        grid-template-columns: 1fr !important;
+        flex: 1 1 100% !important;
+        width: 100% !important;
         min-width: 0 !important;
         gap: 8px !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
 
     header.site-header .header-top-row .header-contact > *,
@@ -1026,4 +1027,20 @@ body > header > nav#primary-nav > ul > li {
     box-sizing: border-box !important;
     min-width: 0 !important;
     max-width: 100% !important;
+}
+
+header.site-header .header-top-row .header-contact,
+body > header .header-top-row .header-contact {
+    overflow: visible !important;
+}
+
+header.site-header .header-top-row .header-contact > a.header-facebook,
+body > header .header-top-row .header-contact > a.header-facebook {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
 }
