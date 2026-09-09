@@ -787,3 +787,37 @@ header.site-header > nav#primary-nav > ul > li.nav-item-has-menu > a::before,
 body > header nav#primary-nav > ul > li.nav-item-has-menu > a::before {
     right: 14px !important;
 }
+
+/* Mantiene el pie visible y centrado en todas las paginas. */
+.site-footer,
+body > footer {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 81px !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px 32px !important;
+    padding: 24px 112px 24px 24px !important;
+    overflow: visible !important;
+    text-align: center !important;
+}
+
+.site-footer > *,
+body > footer > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow-wrap: anywhere !important;
+    text-align: center !important;
+}
+
+@media (max-width: 680px) {
+    .site-footer,
+    body > footer {
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 22px 24px 86px !important;
+    }
+}
