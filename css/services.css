@@ -1,15 +1,16 @@
 .services-intro {
     position: relative;
-    display: block;
-    width: min(var(--container), calc(100% - 48px));
-    max-width: none;
+    display: block !important;
+    width: min(var(--container), calc(100% - 48px)) !important;
+    max-width: var(--container) !important;
     margin: 0 auto;
     padding: 82px 0 54px;
     border-bottom: 1px solid var(--line);
 }
 
 .services-intro-copy {
-    width: 100%;
+    width: 100% !important;
+    max-width: none !important;
     min-width: 0;
 }
 
@@ -27,7 +28,8 @@
 }
 
 .services-intro h1 {
-    max-width: none;
+    width: 100% !important;
+    max-width: 100% !important;
     margin-bottom: 20px;
     color: var(--ink);
     font-size: clamp(2.3rem, 4.2vw, 3.8rem);
@@ -36,7 +38,8 @@
 }
 
 .services-intro p:last-child {
-    max-width: none;
+    width: 100% !important;
+    max-width: 850px !important;
     margin: 0;
     color: var(--muted);
     font-size: 1.04rem;
