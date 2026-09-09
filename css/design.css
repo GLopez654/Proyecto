@@ -850,7 +850,7 @@ body > header .header-top-row .brand-logo-frame {
     header.site-header .header-top-row,
     body > header .header-top-row {
         display: grid !important;
-        grid-template-columns: 180px minmax(0, 1fr) !important;
+        grid-template-columns: 160px minmax(0, 1fr) !important;
         align-items: center !important;
         column-gap: 20px !important;
         width: min(1200px, 100%) !important;
@@ -867,6 +867,7 @@ body > header .header-top-row .brand-logo-frame {
         flex: none !important;
         min-width: 0 !important;
         gap: 18px !important;
+        overflow: hidden !important;
     }
 
     header.site-header .header-top-row .header-contact > *,
@@ -918,8 +919,55 @@ body > header .header-top-row .brand-logo-frame {
 }
 
 @media (max-width: 800px) {
+    header.site-header .header-top-row,
+    body > header .header-top-row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 12px !important;
+    }
+
+    header.site-header .header-top-row .brand,
+    body > header .header-top-row .brand {
+        flex: 0 0 160px !important;
+        min-width: 0 !important;
+    }
+
+    header.site-header .header-top-row .header-contact,
+    body > header .header-top-row .header-contact {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        flex: 1 1 calc(100% - 172px) !important;
+        width: auto !important;
+        min-width: 0 !important;
+        gap: 8px !important;
+        overflow: hidden !important;
+    }
+
+    header.site-header .header-top-row .header-contact > *,
+    body > header .header-top-row .header-contact > * {
+        min-width: 0 !important;
+        max-width: none !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+
     header.site-header .header-top-row .header-contact-button,
     body > header .header-top-row .header-contact-button {
         display: none !important;
     }
+}
+
+header.site-header,
+body > header,
+header.site-header .header-top-row,
+body > header .header-top-row,
+header.site-header .header-top-row .brand,
+body > header .header-top-row .brand,
+header.site-header .header-top-row .header-contact,
+body > header .header-top-row .header-contact {
+    box-sizing: border-box !important;
+    min-width: 0 !important;
 }
