@@ -733,3 +733,41 @@ header.site-header > nav#primary-nav .nav-submenu span {
         margin: 30px 0 0 !important;
     }
 }
+
+/* Evita que WhatsApp tape el correo del pie de pagina. */
+.btn-whatsapp {
+    right: 20px !important;
+    bottom: 84px !important;
+}
+
+.site-footer.contact-footer {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(260px, .8fr) !important;
+    align-items: center !important;
+    gap: 12px 32px !important;
+    padding-right: 112px !important;
+}
+
+.site-footer.contact-footer > p,
+.site-footer.contact-footer > a {
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+}
+
+.site-footer.contact-footer > a:last-child {
+    justify-self: start !important;
+    text-align: left !important;
+}
+
+@media (max-width: 680px) {
+    .btn-whatsapp {
+        right: 16px !important;
+        bottom: 76px !important;
+    }
+
+    .site-footer.contact-footer {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        padding-right: 24px !important;
+    }
+}
