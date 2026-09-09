@@ -847,12 +847,22 @@ body > header .header-top-row .brand-logo-frame {
 }
 
 @media (min-width: 801px) {
+    header.site-header .header-top-row,
+    body > header .header-top-row {
+        display: grid !important;
+        grid-template-columns: 220px minmax(0, 1fr) 142px !important;
+        align-items: center !important;
+        column-gap: 20px !important;
+        width: 100% !important;
+    }
+
     header.site-header .header-top-row .header-contact,
     body > header .header-top-row .header-contact {
         display: grid !important;
-        grid-template-columns: minmax(170px, 1fr) minmax(220px, 1.2fr) minmax(190px, 1fr) !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
         align-items: center !important;
-        flex: 1 1 auto !important;
+        width: 100% !important;
+        flex: none !important;
         min-width: 0 !important;
         gap: 18px !important;
     }
@@ -868,7 +878,8 @@ body > header .header-top-row .brand-logo-frame {
     body > header .header-top-row .header-contact-button {
         flex: 0 0 142px !important;
         min-width: 142px !important;
-        margin-left: 18px !important;
+        width: 142px !important;
+        margin: 0 !important;
         position: relative !important;
         z-index: 2 !important;
     }
@@ -880,5 +891,12 @@ body > header .header-top-row .brand-logo-frame {
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
+    }
+}
+
+@media (max-width: 800px) {
+    header.site-header .header-top-row .header-contact-button,
+    body > header .header-top-row .header-contact-button {
+        display: none !important;
     }
 }
