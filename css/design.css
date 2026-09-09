@@ -771,3 +771,19 @@ header.site-header > nav#primary-nav .nav-submenu span {
         padding-right: 24px !important;
     }
 }
+
+/* Centra cada etiqueta del menu sin desplazarla por la flecha. */
+header.site-header > nav#primary-nav > ul > li > a,
+body > header nav#primary-nav > ul > li > a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 12px 0 !important;
+    text-align: center !important;
+}
+
+header.site-header > nav#primary-nav > ul > li.nav-item-has-menu > a::before,
+body > header nav#primary-nav > ul > li.nav-item-has-menu > a::before {
+    right: 14px !important;
+}
