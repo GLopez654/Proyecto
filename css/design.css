@@ -821,3 +821,27 @@ body > footer > * {
         padding: 22px 24px 86px !important;
     }
 }
+
+/* Presenta el logo oficial completo, sin modificar el archivo SVG. */
+header.site-header .header-top-row .brand-logo,
+body > header .header-top-row .brand-logo {
+    display: block !important;
+    width: 220px !important;
+    height: 72px !important;
+    min-width: 0 !important;
+    max-width: 220px !important;
+    max-height: 72px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border: 0 !important;
+}
+
+header.site-header .header-top-row .brand-logo-frame,
+body > header .header-top-row .brand-logo-frame {
+    display: flex !important;
+    width: 220px !important;
+    height: 72px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow: visible !important;
+}
