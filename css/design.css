@@ -869,5 +869,16 @@ body > header .header-top-row .brand-logo-frame {
         flex: 0 0 142px !important;
         min-width: 142px !important;
         margin-left: 18px !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    header.site-header .header-top-row .header-facebook,
+    body > header .header-top-row .header-facebook {
+        min-width: 0 !important;
+        max-width: none !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
     }
 }
