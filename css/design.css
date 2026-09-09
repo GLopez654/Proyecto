@@ -827,10 +827,10 @@ header.site-header .header-top-row .brand-logo,
 body > header .header-top-row .brand-logo {
     display: block !important;
     width: 220px !important;
-    height: 72px !important;
+    height: 90px !important;
     min-width: 0 !important;
     max-width: 220px !important;
-    max-height: 72px !important;
+    max-height: 90px !important;
     object-fit: contain !important;
     object-position: center !important;
     border: 0 !important;
@@ -840,8 +840,34 @@ header.site-header .header-top-row .brand-logo-frame,
 body > header .header-top-row .brand-logo-frame {
     display: flex !important;
     width: 220px !important;
-    height: 72px !important;
+    height: 90px !important;
     align-items: center !important;
     justify-content: flex-start !important;
     overflow: visible !important;
+}
+
+@media (min-width: 801px) {
+    header.site-header .header-top-row .header-contact,
+    body > header .header-top-row .header-contact {
+        display: grid !important;
+        grid-template-columns: minmax(170px, 1fr) minmax(220px, 1.2fr) minmax(190px, 1fr) !important;
+        align-items: center !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        gap: 18px !important;
+    }
+
+    header.site-header .header-top-row .header-contact > *,
+    body > header .header-top-row .header-contact > * {
+        min-width: 0 !important;
+        max-width: none !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    header.site-header .header-top-row .header-contact-button,
+    body > header .header-top-row .header-contact-button {
+        flex: 0 0 142px !important;
+        min-width: 142px !important;
+        margin-left: 18px !important;
+    }
 }
